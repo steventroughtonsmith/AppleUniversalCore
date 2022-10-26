@@ -12,7 +12,7 @@ public let supportsMacIdiom = !(UIDevice.current.userInterfaceIdiom == .pad)
 import Foundation
 #endif
 
-@inlinable func UIFloat(_ value: CGFloat) -> CGFloat
+@inlinable public func UIFloat(_ value: CGFloat) -> CGFloat
 {
 	#if targetEnvironment(macCatalyst)
 	return (value == 0.5) ? 0.5 : round(value * (supportsMacIdiom ? 0.77 : 1.0))

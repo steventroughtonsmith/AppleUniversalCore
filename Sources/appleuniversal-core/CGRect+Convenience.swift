@@ -10,12 +10,12 @@ import CoreGraphics
 
 extension CGRect {
 	
-	@inlinable func rounded() -> CGRect {
+	@inlinable public func rounded() -> CGRect {
 		
 		return CGRect(x: round(origin.x), y: round(origin.y), width: round(size.width), height: round(size.height))
 	}
 	
-	func centered(in parentRect:CGRect) -> CGRect {
+	public func centered(in parentRect:CGRect) -> CGRect {
 		
 		return CGRect(x: parentRect.minX+(parentRect.width-width)/2, y: parentRect.minY+(parentRect.height-height)/2, width: width, height: height)
 	}
